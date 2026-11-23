@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "electrochem-kit"
+version = "0.1.0"
+description = "Electrochemistry in Python: Nernst potentials, cell thermodynamics, Butler-Volmer kinetics, Tafel analysis and cyclic voltammetry simulation"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Luis Rodriguez" }]
+requires-python = ">=3.9"
+dependencies = ["numpy", "scipy"]
+
+[project.optional-dependencies]
+notebooks = ["matplotlib", "jupyter"]
+
+[tool.setuptools]
+packages = ["echem"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
